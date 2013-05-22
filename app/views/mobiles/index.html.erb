@@ -1,0 +1,34 @@
+<!-- index.html.erb -->
+
+<h1>Listing Mobiles</h1>
+ 
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Model</th>
+		<th>Manufacturer</th>
+		<th>Color</th>
+		<th>Operating System</th>
+	</tr>
+ 
+	<% @mobiles.each do |mobile| %>
+		<tr>
+			<td><%= mobile.type %></td>
+			<td><%= mobile.model %></td>
+			<td><%= mobile.manufacturer %></td>
+			<td></td>
+			<td><%= mobile.operating_system %></td>
+			<td><%= link_to 'Show', mobile %></td>
+			<td><%= link_to 'Edit', edit_mobile_path(mobile) %></td>
+			<td><%= link_to 'Destroy', mobile, :confirm => 'Are you sure?',
+										 :method => :delete %></td>
+		 </tr>
+	<% end %>
+</table>
+ 
+<br />
+ 
+<%= link_to 'Add a new Samsung device', new_samsung_path %> |
+<%= link_to 'Add a new Apple device', new_apple_path %> |
+<%= link_to 'Add a new Macromax device', new_macromax_path %> |
+<%= link_to 'Add a new HTC device', new_htc_path %>

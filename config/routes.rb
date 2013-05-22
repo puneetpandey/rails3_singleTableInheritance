@@ -1,6 +1,11 @@
 Rails3Singletableinheritance::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
+  resources :mobiles
+  resources :samsung, :controller => 'mobiles', :type => "Samsung"
+  resources :apple, :controller => 'mobiles', :type => "Apple"
+  resources :htc, :controller => 'mobiles', :type => "HTC"
+  resources :macromax, :controller => 'mobiles', :type => "Macromax"
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
@@ -48,7 +53,7 @@ Rails3Singletableinheritance::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'mobiles#index'
 
   # See how all your routes lay out with "rake routes"
 

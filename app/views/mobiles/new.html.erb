@@ -1,0 +1,34 @@
+<!-- new.html.erb -->
+
+<%= form_for(@mobile, :as => :mobile) do |f| %>
+	<% if @mobile.errors.any? %>
+		<div id="errorExplanation">
+			<h2><%= pluralize(@mobile.errors.count, "error") %> prohibited
+			this post from being saved:</h2>
+			<ul>
+				<% @mobile.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :model %><br />
+    <%= f.text_field :model %>
+  </div>
+  <div class="field">
+    <%= f.label :manufacturer %><br />
+    <%= f.text_field :manufacturer %>
+  </div>
+  <div class="field">
+    <%= f.label :operating_system %><br />
+    <%= f.text_field :operating_system %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
+
+<%= link_to "All Mobiles", mobiles_path %>
