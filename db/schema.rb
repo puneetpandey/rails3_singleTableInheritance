@@ -11,10 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130521105431) do
+ActiveRecord::Schema.define(:version => 20130523111053) do
 
   create_table "colors", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "events", :force => true do |t|
+    t.string   "name"
+    t.string   "organizer"
+    t.string   "place"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -33,6 +41,21 @@ ActiveRecord::Schema.define(:version => 20130521105431) do
     t.string   "operating_system"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+  end
+
+  create_table "pictures", :force => true do |t|
+    t.string   "name"
+    t.integer  "imageable_id"
+    t.string   "imageable_type"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
