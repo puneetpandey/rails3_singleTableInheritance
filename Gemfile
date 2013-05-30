@@ -10,9 +10,11 @@ group :development do
 	gem 'mysql2'
 end
 
-group :test do
+group :development, :test do
 	gem 'rspec'
+	gem 'rspec-rails'
 	gem 'cucumber'
+	gem 'factory_girl'
 end
 
 group :production do
