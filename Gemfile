@@ -10,6 +10,11 @@ group :development do
 	gem 'mysql2'
 end
 
+group :test do
+	gem 'rspec'
+	gem 'cucumber'
+end
+
 group :production do
 	gem 'pg'
 end
