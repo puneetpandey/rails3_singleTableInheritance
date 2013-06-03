@@ -1,0 +1,21 @@
+<h1>Comments</h1>
+
+<table border="1">
+	<tr>
+		<th> S.No. </th>
+		<th>Comment</th>
+	</tr>
+
+	<% i = 1 %>
+	<% @comments.each do |c| %>
+		<tr>
+			<td><%= i %></td>
+			<td><%= c.comment %></td>
+		</tr>
+		<% i = i + 1 %>
+	<% end %>
+</table>
+
+
+<p><%= link_to "New Comment", [:new, @commendable, :comment] %></p>
+<p><%= link_to "Back", users_path %></p>

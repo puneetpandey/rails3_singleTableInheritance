@@ -1,0 +1,17 @@
+<h1><%= @user.name %></h1>
+
+<% if @user.comments.any? %>
+	<h4> Listing Comments </h4>
+	<% i = 1 %>
+	<% @user.comments.each do |user_comment| %>
+		<p><%= i %>. <%= user_comment.comment %></p>
+		<% i = i + 1 %>
+	<% end %>
+<% else %>
+	No Comments for this User <%= @user.name %>
+<% end %>
+
+<br /><br />
+<%= link_to "Create a New Comment", new_user_comment_path(@user) %>
+<br />
+<%= link_to "Users", users_path %>

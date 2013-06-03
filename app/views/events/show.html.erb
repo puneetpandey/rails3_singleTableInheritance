@@ -1,0 +1,17 @@
+<h1><%= @event.name %></h1>
+
+<% if @event.comments.any? %>
+	<h4> Listing Comments </h4>
+	<% i = 1 %>
+	<% @event.comments.each do |event_comment| %>
+		<p><%= i %>. <%= event_comment.comment %></p>
+		<% i = i + 1 %>
+	<% end %>
+<% else %>
+	No Comments for this event "<em><%= @event.name %></em>"
+<% end %>
+
+<br /><br />
+<%= link_to "Create a New Comment", new_event_comment_path(@event) %>
+<br />
+<%= link_to "Events", events_path %>

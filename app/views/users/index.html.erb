@@ -1,0 +1,19 @@
+<h1>Listing Users with Comments</h1>
+
+<table border="1">
+	<tr>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Comments</th>
+	</tr>
+
+	<% @users.each do |user| %>
+		<tr>
+			<td><%= link_to user.name, user_path(user) %></td>
+			<td><%= user.email %></td>
+			<td><%= user.comments.first.comment if user.comments.any? %> <%= link_to "See All...", user_comments_path(user) %></td>
+		</tr>
+	<% end %>
+</table>
+<br /><br /><br />
+<%= link_to "New User", new_user_path %> | <%= link_to "All Events", events_path %>

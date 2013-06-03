@@ -6,6 +6,9 @@ Rails3Singletableinheritance::Application.routes.draw do
   resources :apple, :controller => 'mobiles', :type => "Apple"
   resources :htc, :controller => 'mobiles', :type => "HTC"
   resources :macromax, :controller => 'mobiles', :type => "Macromax"
+  resources :users, :events do
+	resources :comments
+  end
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
