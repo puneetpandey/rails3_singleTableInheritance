@@ -6,6 +6,12 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'jquery-rails'
+gem 'gollum'
+gem 'gollum-lib', '1.0.3'
+gem 'jammit'
+gem 'redcarpet'
+
+
 group :development do
 	gem 'mysql2'
 end
@@ -15,6 +21,7 @@ group :development, :test do
 	gem 'rspec-rails'
 	gem 'cucumber'
 	gem 'factory_girl'
+	gem 'therubyracer'
 end
 
 group :production do
