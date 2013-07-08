@@ -1,0 +1,10 @@
+Hi,
+
+I am using **Gollum** and this page is going to create under /_doc_ folder
+
+1. This is plain text
+
+> Comes as double quote
+
+
+and finally this is an ASCII doc
