@@ -239,6 +239,7 @@ DEPENDENCIES
   cucumber
   factory_girl
   gollum
+  gollum-lib
   jammit
   jquery-rails
   mysql2
