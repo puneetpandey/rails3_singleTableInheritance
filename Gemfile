@@ -7,7 +7,7 @@ gem 'rails', '~> 4.1', '>= 4.1.11'
 
 gem 'jquery-rails'
 gem 'gollum'
-gem 'gollum-lib'
+#gem 'gollum-lib'
 gem 'jammit'
 gem 'redcarpet'
 
