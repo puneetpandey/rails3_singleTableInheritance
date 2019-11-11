@@ -136,7 +136,7 @@ GEM
     pg (1.1.3)
     pg (1.1.3-x86-mingw32)
     posix-spawn (0.3.13)
-    rack (1.6.10)
+    rack (1.6.11)
     rack-protection (1.5.5)
       rack
     rack-test (0.6.3)
