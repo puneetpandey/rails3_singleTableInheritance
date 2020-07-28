@@ -110,7 +110,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     jsmin (1.0.1)
-    json (2.1.0)
+    json (2.3.1)
     kramdown (1.9.0)
     libv8 (3.16.14.19)
     loofah (2.3.1)
